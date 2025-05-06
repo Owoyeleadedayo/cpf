@@ -13,10 +13,15 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>My Website Title</title>
+        <title>Covenant People Fellowship</title>
         <meta
-          name="description"
-          content="This is a description of my website."
+          name="Covenant People Fellowship was birthed in 2007 as a response to
+              God's call."
+          content=" Covenant People Fellowship was birthed in 2007 as a response to
+              God's call. It is a fellowship where we travail in the labor
+              room of Prayer to bring about God's purpose as stated in
+              Isaiah 66:8 &quot;As soon as Zion travailed, she brought
+              forth.&quot;"
         />
         <meta name="keywords" content="church, worship, community, prayer" />
         <meta name="author" content="Covenant People Fellowship" />
@@ -29,18 +34,18 @@ export default function Home() {
         <meta property="og:url" content="https://cpfellowship.org" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-    <main className="flex min-h-screen flex-col">
-      <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
-        <SmoothScroll />
-        <Navbar />
-        <HeroSlider />
-        <AboutSession />
-        <MissionSession />
-        <CTAPrayerSession />
-        <WhatsAppButton />
-        <Footer />
-      </ReactLenis>
-    </main>
+      <main className="flex min-h-screen flex-col">
+        <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
+          <SmoothScroll />
+          <Navbar />
+          <HeroSlider />
+          <AboutSession />
+          <MissionSession />
+          <CTAPrayerSession />
+          <WhatsAppButton />
+          <Footer />
+        </ReactLenis>
+      </main>
     </>
   );
 }
