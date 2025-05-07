@@ -67,6 +67,7 @@ export default function CTAPrayerSession() {
     <>
       {/* Call to Action Section */}
       <motion.section
+        id="joinus"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}

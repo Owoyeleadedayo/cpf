@@ -14,15 +14,15 @@ export default function Navbar() {
       >
         {/* Desktop Logo */}
         {/* <div className="md:flex hidden items-center"> */}
-          <a href="/" className="flex items-center space-x-2">
-            <img
-              src={Logo}
-              alt="Logo"
-              width={70}
-              height={70}
-              className="rounded"
-            />
-          </a>
+        <a href="/" className="flex items-center space-x-2">
+          <img
+            src={Logo}
+            alt="Logo"
+            width={70}
+            height={70}
+            className="rounded"
+          />
+        </a>
         {/* </div> */}
 
         {/* Mobile Logo */}
@@ -61,7 +61,7 @@ export default function Navbar() {
             Prayer Request
           </a>
           <a
-            href="https://chat.whatsapp.com/example"
+            href="#joinus"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium hover:text-primary"
