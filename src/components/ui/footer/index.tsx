@@ -107,7 +107,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <address className="not-italic text-sm text-muted-foreground">
               <p>Email: www.csfellowships@gmail.com</p>
-              <p>Phone: +(234)8037219016</p>
+              <p>whatsapp: +(234)8037219016</p>
+              <p>whatsapp: +(234)8026016413</p>
               <p className="mt-4">
                 &copy; {new Date().getFullYear()} Covenant People Fellowship.
                 <br />

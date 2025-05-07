@@ -33,22 +33,23 @@ export default function AboutSession() {
               About Covenant People Fellowship
             </h2>
             <p className="text-muted-foreground leading-7">
-              Covenant People Fellowship was birthed in 2007 as a response to
-              God&apos;s call. It is a fellowship where we travail in the labor
-              room of Prayer to bring about God&apos;s purpose as stated in
-              Isaiah 66:8 &quot;As soon as Zion travailed, she brought
-              forth.&quot;
+              Covenant People Fellowship (CPF) began as a vision in 2006, when
+              God spoke clearly about raising a people dedicated to birthing
+              destinies through prayer, sacrifice, and wholehearted pursuit of
+              Him. In 2007, the burden grew stronger, and CPF was born as a
+              response to that divine call.
             </p>
             <p className="text-muted-foreground leading-7">
-              In the year 2006, the Lord spoke clearly to establish a place
-              where destiny is being birthed. Covenant People&apos;s Fellowship
-              is a call to a life of sacrifice unto God, the covenant keeping
-              God, the rewarder of them that diligently seek Him.
+              After years of waiting, nurturing, and preparation, CPF was
+              officially inaugurated in May 2024. What began as a vision has now
+              become a gathering place for Word, Worship, and Warfare. We come
+              together to enjoy God’s presence, discover purpose, and fulfill
+              destiny, individually and collectively.
             </p>
             <p className="text-muted-foreground leading-7">
-              We gather together for the purpose of Word, Worship and Warfare;
-              enjoying His presence, birthing destinies and fulfilling purpose
-              in life.
+              CPF is more than a fellowship; it is a covenant walk. It’s a call
+              to a life of sacrifice, devotion, and alignment with the
+              covenant-keeping God, who rewards those who diligently seek Him.”
             </p>
             <motion.div
               className="flex flex-col gap-2 min-[400px]:flex-row pt-4"
