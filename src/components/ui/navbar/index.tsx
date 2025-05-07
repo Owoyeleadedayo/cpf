@@ -49,9 +49,6 @@ export default function Navbar() {
           <a href="#mission" className="text-sm font-medium hover:text-primary">
             Mission
           </a>
-          <a href="#prayer" className="text-sm font-medium hover:text-primary">
-            Prayer Request
-          </a>
           <a
             href="#joinus"
             target="_blank"
@@ -59,6 +56,9 @@ export default function Navbar() {
             className="text-sm font-medium hover:text-primary"
           >
             Join Our Group
+          </a>
+          <a href="#prayer" className="text-sm font-medium hover:text-primary">
+            Prayer Request
           </a>
         </motion.nav>
 

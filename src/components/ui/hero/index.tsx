@@ -9,7 +9,7 @@ import { useEffect, useState, useCallback, useRef } from "react";
 const slides = [
   {
     image: Hero,
-    title: "Birthing Destinies",
+    title: "Birthing Destinies.",
     subtitle:
       "We are a community of believers on a journey to fulfilling the God purpose",
     description:
