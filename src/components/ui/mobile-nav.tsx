@@ -40,7 +40,7 @@ export default function MobileNav() {
             Prayer Request
           </a>
           <a
-            href="#prayer"
+            href="#joinus"
             className="text-lg font-medium hover:text-primary"
             onClick={() => setOpen(false)}
           >
