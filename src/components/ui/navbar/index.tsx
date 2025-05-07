@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import MobileNav from "../mobile-nav"; 
 import Logo from "../../../assets/logo.png";
-import LogoText from "../../../assets/logo-text.png"; 
 
 export default function Navbar() {
   return (
@@ -13,8 +12,8 @@ export default function Navbar() {
         className="max-w-6xl mx-auto flex h-[5rem] md:h-[4rem] items-center justify-between"
       >
         {/* Desktop Logo */}
-        {/* <div className="md:flex hidden items-center"> */}
-        <a href="/" className="flex items-center space-x-2">
+        <div className="md:flex hidden">
+        <a href="/" className="space-x-2">
           <img
             src={Logo}
             alt="Logo"
@@ -23,23 +22,16 @@ export default function Navbar() {
             className="rounded"
           />
         </a>
-        {/* </div> */}
+        </div>
 
         {/* Mobile Logo */}
-        <div className="flex items-center md:hidden px-4">
+        <div className="flex  md:hidden px-4">
           <a href="/" className="flex items-center space-x-2">
             <img
               src={Logo}
               alt="Logo"
               width={50}
               height={50}
-              className="rounded"
-            />
-            <img
-              src={LogoText}
-              alt="Logo Text"
-              width={80}
-              height={80}
               className="rounded"
             />
           </a>

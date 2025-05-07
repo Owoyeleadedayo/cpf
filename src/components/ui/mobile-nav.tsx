@@ -9,15 +9,15 @@ export default function MobileNav() {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild className="md:hidden">
+      <SheetTrigger asChild className="md:hidden p-4">
         <Button variant="ghost" size="lg">
-          <Menu className="h-5 w-5" />
+          <Menu className="h-10 w-10" />
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
 
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-        <nav className="flex flex-col gap-4 mt-8">
+        <nav className="flex flex-col gap-4 mt-8 p-4">
           <a
             href="#about"
             className="text-lg font-medium hover:text-primary"
@@ -40,11 +40,10 @@ export default function MobileNav() {
             Prayer Request
           </a>
           <a
-            href="https://chat.whatsapp.com/example"
+            href="#joinus"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-lg font-medium hover:text-primary"
-            onClick={() => setOpen(false)}
+            className="text-sm font-medium hover:text-primary"
           >
             Join Our Group
           </a>
