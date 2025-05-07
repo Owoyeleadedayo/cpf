@@ -7,7 +7,7 @@ import { HeroSlider } from "./components/ui/hero";
 import MissionSession from "./components/ui/mission";
 import Navbar from "./components/ui/navbar";
 import CTAPrayerSession from "./components/ui/prayer-request";
-import WhatsAppButton from "./components/ui/whatsapp";
+// import WhatsAppButton from "./components/ui/whatsapp";
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
           <AboutSession />
           <MissionSession />
           <CTAPrayerSession />
-          <WhatsAppButton />
+          {/* <WhatsAppButton /> */}
           <Footer />
         </ReactLenis>
       </main>
