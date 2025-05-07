@@ -40,10 +40,9 @@ export default function MobileNav() {
             Prayer Request
           </a>
           <a
-            href="#joinus"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium hover:text-primary"
+            href="#prayer"
+            className="text-lg font-medium hover:text-primary"
+            onClick={() => setOpen(false)}
           >
             Join Our Group
           </a>
