@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import ReactLenis from "lenis/react";
 import SmoothScroll from "./components/ui/smooth-scroll";
 import AboutSession from "./components/ui/about-cpf";
+import VisionSession from "./components/ui/vision";
 import Footer from "./components/ui/footer";
 import { HeroSlider } from "./components/ui/hero";
 import MissionSession from "./components/ui/mission";
@@ -40,6 +41,7 @@ export default function Home() {
           <Navbar />
           <HeroSlider />
           <AboutSession />
+          <VisionSession />
           <MissionSession />
           <CTAPrayerSession />
           {/* <WhatsAppButton /> */}
