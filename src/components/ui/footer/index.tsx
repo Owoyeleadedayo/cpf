@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Logo from "../../../assets/logo.png";
 
 const Footer = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -34,9 +35,20 @@ const Footer = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <a href="/" className="flex items-center space-x-2">
+            <div className="md:flex hidden">
+              <a href="/" className="space-x-2">
+                <img
+                  src={Logo}
+                  alt="Logo"
+                  width={70}
+                  height={70}
+                  className="rounded"
+                />
+              </a>
+            </div>
+            {/* <a href="/" className="flex items-center space-x-2">
               <span className="font-bold">COVENANT PEOPLE FELLOWSHIP</span>
-            </a>
+            </a> */}
             <p className="text-sm text-muted-foreground">
               Established 2007, Revised 2024
             </p>
@@ -56,6 +68,12 @@ const Footer = () => {
                 className="text-sm text-muted-foreground hover:text-foreground"
               >
                 About Us
+              </a>
+              <a
+                href="#vision"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
+                Vision
               </a>
               <a
                 href="#mission"
@@ -89,11 +107,10 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold mb-4">Core Values</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>We believe in the Holy Trinity</li>
-              <li>We believe in Prayer</li>
-              <li>We believe in completeness in Christ</li>
-              <li>We believe in fulfilling purpose and destiny</li>
-              <li>We believe in Wisdom, Love and Unity</li>
+              <li>Truth</li>
+              <li>Love</li>
+              <li>Completeness</li>
+              <li>Purpose</li>
             </ul>
           </motion.div>
 

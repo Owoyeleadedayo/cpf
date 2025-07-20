@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import MobileNav from "../mobile-nav"; 
+import MobileNav from "../mobile-nav";
 import Logo from "../../../assets/logo.png";
 
 export default function Navbar() {
@@ -13,15 +13,15 @@ export default function Navbar() {
       >
         {/* Desktop Logo */}
         <div className="md:flex hidden">
-        <a href="/" className="space-x-2">
-          <img
-            src={Logo}
-            alt="Logo"
-            width={70}
-            height={70}
-            className="rounded"
-          />
-        </a>
+          <a href="/" className="space-x-2">
+            <img
+              src={Logo}
+              alt="Logo"
+              width={70}
+              height={70}
+              className="rounded"
+            />
+          </a>
         </div>
 
         {/* Mobile Logo */}
@@ -46,6 +46,9 @@ export default function Navbar() {
           <a href="#about" className="text-sm font-medium hover:text-primary">
             About Us
           </a>
+          <a href="#vision" className="text-sm font-medium hover:text-primary">
+            Vision
+          </a>
           <a href="#mission" className="text-sm font-medium hover:text-primary">
             Mission
           </a>
@@ -68,4 +71,4 @@ export default function Navbar() {
     </header>
   );
 }
-
+yyyyy;
