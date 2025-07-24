@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-export default function MissionSession() {
+export default function vissionSession() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   return (
     <motion.section
@@ -11,20 +11,21 @@ export default function MissionSession() {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
       id="vision"
-      className="w-full py-12 md:py-24 lg:py-28 bg-muted flex flex-col items-center justify-center"
+      className="w-full py-9 md:py-16 lg:py-16 bg-muted flex flex-col items-center justify-center"
     >
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 ">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+          <div className="space-y-2 w-full">
+            <h2 className="text-4xl font-bold tracking-tighter md:text-4xl">
               Our Vision
             </h2>
             <div className="py-4">
-              <p className="text-center text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                To raise a tribe of complete People birthing destinies
+              <p className="text-center text-muted-foreground md:text-lg/relaxed lg:text-xl/relaxed xl:text-2xl/relaxed ">
+                To raise a tribe of complete People birthing destinies and
+                bringing
               </p>
-              <p className="text-center text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                and bringing to pass the will of God on earth.
+              <p className="text-center text-muted-foreground md:text-lg/relaxed lg:text-xl/relaxed xl:text-2xl/relaxed  ">
+                to pass the will of God on earth.
               </p>
             </div>
           </div>
@@ -44,29 +45,29 @@ export default function MissionSession() {
               transition: { staggerChildren: 0.3 },
             },
           }}
-          className="mx-auto grid max-w-6xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-2"
+          // className="mx-auto grid max-w-6xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-2"
         >
-          {[
-            {
-              title: "Gathering Together",
-              description:
-                "In line with Psalm 50:5, we gather together from time to time for fellowship both online and in-person.",
-            },
-            {
-              title: "Worship",
-              description:
-                "According to Revelation 4:8-11, whenever we come together, we worship His majesty in the beauty of His holiness.",
-            },
-            {
-              title: "Supplication & Intercession",
-              description:
-                "We have weekly virtual prayers and monthly physical gatherings to worship God and pray for our garden.",
-            },
-            {
-              title: "Bible Study",
-              description:
-                "Following 2 Timothy 2:15, we study the word of God which brings us to the knowledge of the truth, maturing us into complete people.",
-            },
+          {/* {[
+            // {
+            //   title: "Gathering Together",
+            //   description:
+            //     "In line with Psalm 50:5, we gather together from time to time for fellowship both online and in-person.",
+            // },
+            // {
+            //   title: "Worship",
+            //   description:
+            //     "According to Revelation 4:8-11, whenever we come together, we worship His majesty in the beauty of His holiness.",
+            // },
+            // {
+            //   title: "Supplication & Intercession",
+            //   description:
+            //     "We have weekly virtual prayers and monthly physical gatherings to worship God and pray for our garden.",
+            // },
+            // {
+            //   title: "Bible Study",
+            //   description:
+            //     "Following 2 Timothy 2:15, we study the word of God which brings us to the knowledge of the truth, maturing us into complete people.",
+            // },
             // {
             //   title: "Raising Intercessors",
             //   description:
@@ -95,7 +96,7 @@ export default function MissionSession() {
                 </p>
               </div>
             </motion.div>
-          ))}
+          ))} */}
         </motion.div>
       </div>
     </motion.section>

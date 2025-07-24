@@ -71,4 +71,3 @@ export default function Navbar() {
     </header>
   );
 }
-yyyyy;
