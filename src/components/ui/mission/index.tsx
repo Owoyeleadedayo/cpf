@@ -21,10 +21,10 @@ export default function MissionSession() {
             </h2>
             <div className="py-4">
               <p className="text-center text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                To raise a tribe of complete People birthing destinies
+                To build a people of fellowship, grounded in prayer, worship,
               </p>
               <p className="text-center text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                and bringing to pass the will of God on earth.
+                and the Word birthing God’s purpose on earth.
               </p>
             </div>
           </div>
@@ -76,6 +76,11 @@ export default function MissionSession() {
               title: "Birthing Destinies",
               description:
                 "Our major assignment is to birth destinies at God's Threshing Floor through intercession as the Spirit of God instructs.",
+            },
+            {
+              title: "Vision",
+              description:
+                "To raise a tribe of complete people who birth destinies and bring to pass the will of God on earth",
             },
           ].map((mission, index) => (
             <motion.div

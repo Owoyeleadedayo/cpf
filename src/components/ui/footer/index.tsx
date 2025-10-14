@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 const Footer = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
+
   return (
     <motion.footer
       className="w-full border-t py-6 md:py-16 bg-muted"
@@ -89,11 +90,11 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold mb-4">Core Values</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>We believe in the Holy Trinity</li>
-              <li>We believe in Prayer</li>
-              <li>We believe in completeness in Christ</li>
-              <li>We believe in fulfilling purpose and destiny</li>
-              <li>We believe in Wisdom, Love and Unity</li>
+              <li>Truth</li>
+              <li>Love</li>
+              <li>Completeness</li>
+              <li>Purpose</li>
+           
             </ul>
           </motion.div>
 
@@ -109,6 +110,7 @@ const Footer = () => {
               <p>Email: www.csfellowships@gmail.com</p>
               <p>whatsapp: +(234)8037219016</p>
               <p>whatsapp: +(234)8026016413</p>
+             
               <p className="mt-4">
                 &copy; {new Date().getFullYear()} Covenant People Fellowship.
                 <br />
@@ -123,3 +125,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

@@ -34,9 +34,9 @@ const slides = [
 // Animation variants
 const imageVariants = {
   enter: (direction: number) => ({
-    scale: 1.2,
+    scale: 1.08,
     opacity: 0,
-    x: direction > 0 ? "100%" : "-100%",
+    x: direction > 0 ? "60%" : "-60%",
   }),
   center: {
     scale: 1,
@@ -44,9 +44,9 @@ const imageVariants = {
     x: 0,
   },
   exit: (direction: number) => ({
-    scale: 0.8,
+    scale: 0.96,
     opacity: 0,
-    x: direction > 0 ? "-100%" : "100%",
+    x: direction > 0 ? "-60%" : "60%",
   }),
 };
 
@@ -66,23 +66,29 @@ const textVariants = {
 };
 
 const transition = {
-  duration: 0.8,
-  ease: [0.32, 0.72, 0, 1],
+  duration: 1.2,
+  ease: "easeInOut",
 };
 
 export function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Preload images
+  // Preload only the current slide and the next slide to avoid
+  // downloading all assets up-front which slows initial page load.
   useEffect(() => {
-    slides.forEach((slide) => {
+    const preload = (src?: string) => {
+      if (!src) return;
       const img = new Image();
-      img.src = slide.image;
-    });
-  }, []);
+      img.src = src;
+    };
+
+    // Preload currently visible image (helps when navigating) and the next one
+    preload(slides[currentSlide]?.image);
+    const nextIndex = (currentSlide + 1) % slides.length;
+    preload(slides[nextIndex]?.image);
+  }, [currentSlide]);
 
   const nextSlide = useCallback(() => {
     setDirection(1);
@@ -99,13 +105,8 @@ export function HeroSlider() {
     setCurrentSlide(index);
   };
 
-  // Auto-play functionality
+  // Auto-play functionality — run continuously regardless of hover
   useEffect(() => {
-    if (isHovered) {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      return;
-    }
-
     intervalRef.current = setInterval(() => {
       nextSlide();
     }, 5000);
@@ -113,50 +114,12 @@ export function HeroSlider() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [isHovered, nextSlide]);
+  }, [nextSlide]);
 
-  // Progress bar component
-  const ProgressBar = () => {
-    const [progress, setProgress] = useState(0);
-
-    useEffect(() => {
-      if (isHovered) {
-        setProgress(0);
-        return;
-      }
-
-      const duration = 5000;
-      let start: number | null = null;
-      
-      const animate = (timestamp: number) => {
-        if (!start) start = timestamp;
-        const elapsed = timestamp - start;
-        const newProgress = Math.min((elapsed / duration) * 100, 100);
-        setProgress(newProgress);
-
-        if (elapsed < duration) {
-          requestAnimationFrame(animate);
-        }
-      };
-
-      const raf = requestAnimationFrame(animate);
-      return () => cancelAnimationFrame(raf);
-    }, [isHovered]);
-
-    return (
-      <motion.div
-        className="absolute bottom-0 left-0 h-1 bg-white/80 z-30"
-        style={{ width: `${progress}%` }}
-      />
-    );
-  };
+  // Progress bar removed — autoplay runs continuously
 
   return (
-    <section
-      className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <section className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
       <AnimatePresence custom={direction} initial={false}>
         <motion.div
           key={currentSlide}
@@ -175,8 +138,13 @@ export function HeroSlider() {
             className="absolute inset-0 w-full h-full object-cover z-0"
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 8, ease: "linear" }}
-            loading="lazy"
+            transition={{ duration: 10, ease: "linear" }}
+            // Prioritize the very first hero image for faster Largest Contentful Paint
+            loading={currentSlide === 0 ? "eager" : "lazy"}
+            // Let the browser decode asynchronously to avoid blocking main thread
+            decoding="async"
+            // Hint the browser to prioritize fetching the hero image
+            fetchPriority={currentSlide === 0 ? "high" : "auto"}
           />
         </motion.div>
       </AnimatePresence>
@@ -245,7 +213,7 @@ export function HeroSlider() {
         onClick={prevSlide}
         whileHover={{ scale: 1.2, backgroundColor: "rgba(0,0,0,0.7)" }}
         whileTap={{ scale: 0.9 }}
-        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        transition={{ type: "spring", stiffness: 260, damping: 22 }}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 text-white p-3 rounded-full"
         aria-label="Previous slide"
       >
@@ -256,14 +224,14 @@ export function HeroSlider() {
         onClick={nextSlide}
         whileHover={{ scale: 1.2, backgroundColor: "rgba(0,0,0,0.7)" }}
         whileTap={{ scale: 0.9 }}
-        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        transition={{ type: "spring", stiffness: 260, damping: 22 }}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/30 text-white p-3 rounded-full"
         aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />
       </motion.button>
 
-      <ProgressBar />
+
 
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2"
