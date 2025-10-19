@@ -1,8 +1,10 @@
-import { createClient } from '@supabase/supabase-js';
+// Unified Supabase client entrypoint.
+// The project uses an async loader `getSupabaseClient()` in `supabaseClient.ts` so
+// re-export that here to avoid multiple different client implementations.
+// Prefer importing `getSupabaseClient` for code that needs the client (async):
+//   const supabase = await getSupabaseClient();
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const SUPABASE_ANON = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+export { getSupabaseClient, type SupabaseClient } from './supabaseClient';
 
-export const supabase = SUPABASE_URL && SUPABASE_ANON ? createClient(SUPABASE_URL, SUPABASE_ANON) : null;
-
-export default supabase;
+// Keep a default export for compatibility — re-export the async loader as default.
+export { getSupabaseClient as default } from './supabaseClient';

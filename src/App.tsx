@@ -1,51 +1,60 @@
-import { Helmet } from "react-helmet";
-import ReactLenis from "lenis/react";
-import SmoothScroll from "./components/ui/smooth-scroll";
-import AboutSession from "./components/ui/about-cpf";
-import Footer from "./components/ui/footer";
-import { HeroSlider } from "./components/ui/hero";
-import MissionSession from "./components/ui/mission";
-import Navbar from "./components/ui/navbar";
-import CTAPrayerSession from "./components/ui/prayer-request";
-// import WhatsAppButton from "./components/ui/whatsapp";
+import { RouterProvider, createBrowserRouter } from "react-router";
+import { Toaster } from "sonner";
+import { SupabaseAuthProvider } from "./context/SupabaseAuthContext";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminLayout from "./pages/admin/AdminLayout";
+import AdminLoginPage from "./pages/admin/AdminLoginPage";
+import AdminPostForm from "./pages/admin/AdminPostForm";
+import AdminPostsList from "./pages/admin/AdminPostsList";
+import { RequireAuth } from "./pages/admin/RequireAuth";
+import DevotionalDetailPage from "./pages/devotionals/DevotionalDetailPage";
+import DevotionalsListPage from "./pages/devotionals/DevotionalsListPage";
+import HomePage from "./pages/Home";
+import NotFoundPage from "./pages/NotFoundPage";
 
-export default function Home() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/devotionals",
+    element: <DevotionalsListPage />,
+  },
+  {
+    path: "/devotionals/:slug",
+    element: <DevotionalDetailPage />,
+  },
+  {
+    path: "/admin/login",
+    element: <AdminLoginPage />,
+  },
+  {
+    path: "/admin",
+    element: <RequireAuth />,
+    children: [
+      {
+        element: <AdminLayout />,
+        children: [
+          { index: true, element: <AdminDashboard /> },
+          { path: "posts", element: <AdminPostsList /> },
+          { path: "posts/new", element: <AdminPostForm /> },
+          { path: "posts/:id", element: <AdminPostForm /> },
+        ],
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
+  },
+]);
+
+export default function App() {
   return (
-    <>
-      <Helmet>
-        <title>Covenant People Fellowship</title>
-        <meta
-          name="Covenant People Fellowship was birthed in 2007 as a response to
-              God's call."
-          content=" Covenant People Fellowship was birthed in 2007 as a response to
-              God's call. It is a fellowship where we travail in the labor
-              room of Prayer to bring about God's purpose as stated in
-              Isaiah 66:8 &quot;As soon as Zion travailed, she brought
-              forth.&quot;"
-        />
-        <meta name="keywords" content="church, worship, community, prayer" />
-        <meta name="author" content="Covenant People Fellowship" />
-        <meta property="og:title" content="Covenant People Fellowship" />
-        <meta
-          property="og:description"
-          content="We are a community of believers."
-        />
-        <meta property="og:image" content="/images/social-preview.png" />
-        <meta property="og:url" content="https://cpfellowship.org" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
-      <main className="flex min-h-screen flex-col">
-        <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
-          <SmoothScroll />
-          <Navbar />
-          <HeroSlider />
-          <AboutSession />
-          <MissionSession />
-          <CTAPrayerSession />
-          {/* <WhatsAppButton /> */}
-          <Footer />
-        </ReactLenis>
-      </main>
-    </>
+    <SupabaseAuthProvider>
+      <Toaster position="top-right" richColors />
+      <RouterProvider router={router} />
+    </SupabaseAuthProvider>
   );
 }
