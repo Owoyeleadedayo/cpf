@@ -54,9 +54,12 @@ export function PrayerRequestForm() {
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-medium">
+          <label
+            htmlFor="email"
+            className="text-base font-['Montserrat'] font-medium"
+          >
             Email
           </label>
           <Input
@@ -65,11 +68,15 @@ export function PrayerRequestForm() {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="font-['Montserrat'] border border-gray-400 focus:border-primary focus:ring focus:ring-primary/20 rounded-lg"
             required
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="message" className="text-sm font-medium">
+          <label
+            htmlFor="message"
+            className="text-base font-['Montserrat'] font-medium"
+          >
             Prayer Request
           </label>
           <Textarea
@@ -77,16 +84,20 @@ export function PrayerRequestForm() {
             placeholder="Share your prayer request..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="min-h-[150px]"
+            className="min-h-[150px] font-['Montserrat'] border border-gray-400 focus:border-primary focus:ring focus:ring-primary/20 rounded-lg"
             required
           />
         </div>
         <motion.div whileTap={{ scale: 0.95 }}>
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
+          <Button
+            type="submit"
+            className="w-full font-['Montserrat'] cursor-pointer"
+            disabled={isSubmitting}
+          >
             {isSubmitting ? "Sending..." : "Submit Prayer Request"}
           </Button>
         </motion.div>
-        <p className="text-center text-sm text-muted-foreground">
+        <p className="text-center text-sm font-['Montserrat'] text-muted-foreground">
           Your prayer request will be kept confidential and shared only with our
           prayer team.
         </p>

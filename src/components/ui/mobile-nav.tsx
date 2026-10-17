@@ -11,7 +11,7 @@ export default function MobileNav() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild className="md:hidden p-4">
         <Button variant="ghost" size="lg">
-          <Menu className="h-10 w-10" />
+          <Menu className="h-10 w-10 mr-4"  />
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
@@ -31,6 +31,13 @@ export default function MobileNav() {
             onClick={() => setOpen(false)}
           >
             Mission
+          </a>
+          <a
+            href="#weekly-meditation"
+            className="text-lg font-medium hover:text-primary"
+            onClick={() => setOpen(false)}
+          >
+            Weekly Prayer
           </a>
           <a
             href="#prayer"

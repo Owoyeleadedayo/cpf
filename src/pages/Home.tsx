@@ -9,6 +9,7 @@ import Navbar from "../components/ui/navbar";
 import CTAPrayerSession from "../components/ui/prayer-request";
 import SmoothScroll from "../components/ui/smooth-scroll";
 import { DevotionalCarousel } from "../components/devotional/DevotionalCarousel";
+import PrayerMeditation from "../components/ui/prayer-meditation";
 
 export default function HomePage() {
   return (
@@ -36,6 +37,7 @@ export default function HomePage() {
           <AboutSession />
           {/* <VisionSession /> */}
           <MissionSession />
+          <PrayerMeditation />
           <CTAPrayerSession />
           <Footer />
         </ReactLenis>

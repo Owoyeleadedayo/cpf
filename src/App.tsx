@@ -7,6 +7,8 @@ import AdminLoginPage from "./pages/admin/AdminLoginPage";
 import AdminPostForm from "./pages/admin/AdminPostForm";
 import AdminPostsList from "./pages/admin/AdminPostsList";
 import { RequireAuth } from "./pages/admin/RequireAuth";
+import AdminMeditationsList from "./pages/admin/AdminMeditationsList";
+import AdminMeditationForm from "./pages/admin/AdminMeditationForm";
 import DevotionalDetailPage from "./pages/devotionals/DevotionalDetailPage";
 import DevotionalsListPage from "./pages/devotionals/DevotionalsListPage";
 import HomePage from "./pages/Home";
@@ -40,6 +42,9 @@ const router = createBrowserRouter([
           { path: "posts", element: <AdminPostsList /> },
           { path: "posts/new", element: <AdminPostForm /> },
           { path: "posts/:id", element: <AdminPostForm /> },
+          { path: "meditations", element: <AdminMeditationsList /> },
+          { path: "meditations/new", element: <AdminMeditationForm /> },
+          { path: "meditations/:id", element: <AdminMeditationForm /> },
         ],
       },
     ],

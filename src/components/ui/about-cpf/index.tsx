@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+// import { ChevronRight } from "lucide-react";
 // import Image from "next/image";
 import About from "../../../assets/convenant.jpeg";
 
@@ -8,14 +8,14 @@ export default function AboutSession() {
   return (
     <motion.section
       id="about"
-      className="w-full py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center"
+      className="w-full py-12 md:py-24 lg:py-32 lg:px-28 flex flex-col items-center justify-center bg-white"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <div className="container px-4 md:px-6">
+      <div className="container">
         <motion.div
-          className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center grid-col-row-dense md:grid-col-row"
+          className="grid gap-4 md:gap-6 lg:grid-cols-2 lg:gap-12 items-center grid-col-row-dense md:grid-col-row"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -29,24 +29,24 @@ export default function AboutSession() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+            <h2 className="text-xl font-semibold tracking-tighter font-['Montserrat'] md:text-3xl">
               About Covenant People Fellowship
             </h2>
-            <p className="text-muted-foreground leading-7">
+            <p className="text-muted-foreground text-base md:text-lg font-normal font-['Figtree'] leading-7">
               Covenant People Fellowship (CPF) began as a vision in 2006, when
               God spoke clearly about raising a people dedicated to birthing
               destinies through prayer, sacrifice, and wholehearted pursuit of
               Him. In 2007, the burden grew stronger, and CPF was born as a
               response to that divine call.
             </p>
-            <p className="text-muted-foreground leading-7">
+            <p className="text-muted-foreground text-base md:text-lg font-normal font-['Figtree'] leading-7">
               After years of waiting, nurturing, and preparation, CPF was
               officially inaugurated in May 2024. What began as a vision has now
               become a gathering place for Word, Worship, and Warfare. We come
               together to enjoy God’s presence, discover purpose, and fulfill
               destiny, individually and collectively.
             </p>
-            <p className="text-muted-foreground leading-7">
+            <p className="text-muted-foreground text-base md:text-lg font-normal font-['Figtree'] leading-7">
               CPF is more than a fellowship; it is a covenant walk. It’s a call
               to a life of sacrifice, devotion, and alignment with the
               covenant-keeping God, who rewards those who diligently seek Him.”
@@ -58,9 +58,9 @@ export default function AboutSession() {
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <Button className="gap-1">
+              {/* <Button className="gap-1 font-medium font-['Figtree']">
                 Learn More <ChevronRight className="h-4 w-4" />
-              </Button>
+              </Button> */}
             </motion.div>
           </motion.div>
 
@@ -75,7 +75,7 @@ export default function AboutSession() {
             <img
               src={About}
               alt="Fellowship gathering"
-              className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+              className="mx-auto aspect-square overflow-hidden rounded-md object-cover"
             />
           </motion.div>
         </motion.div>

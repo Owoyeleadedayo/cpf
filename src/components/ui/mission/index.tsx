@@ -11,19 +11,17 @@ export default function MissionSession() {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
       id="mission"
-      className="w-full py-12 md:py-2 lg:py-2 bg-muted flex flex-col items-center justify-center"
+      className="w-full py-12 md:py-14 lg:py-18 bg-muted flex flex-col items-center justify-center"
     >
-      <div className="container px-4 md:px">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+      <div className="container">
+        <div className="flex flex-col items-center justify-center space-y-3 text-center">
+          <div className="space-y-1">
+            <h2 className="text-2xl font-semibold font-['Montserrat'] tracking-tighter md:text-4xl">
               Our Mission
             </h2>
-            <div className="py-4">
-              <p className="text-center text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <div className="py-3 w-full md:max-w-xl">
+              <p className="text-center text-base font-['Figtree'] md:text-lg/relaxed lg:text-xl/relaxed">
                 To build a people of fellowship, grounded in prayer, worship,
-              </p>
-              <p className="text-center text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 and the Word birthing God’s purpose on earth.
               </p>
             </div>
@@ -44,7 +42,7 @@ export default function MissionSession() {
               transition: { staggerChildren: 0.3 },
             },
           }}
-          className="mx-auto grid max-w-6xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3"
+          className="mx-auto grid max-w-6xl gap-6 py-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {[
             {
@@ -91,11 +89,13 @@ export default function MissionSession() {
                 visible: { opacity: 1, y: 0 },
               }}
               key={index}
-              className="flex flex-col justify-between rounded-lg border bg-card px-6  py-8 shadow-sm"
+              className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/30 bg-gradient-to-br from-white/40 to-white/10 px-6 py-8 backdrop-blur-2xl backdrop-saturate-200 shadow-[0_8px_32px_rgba(31,38,135,0.15),inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(255,255,255,0.1)]"
             >
               <div>
-                <h3 className="text-xl font-bold">{mission.title}</h3>
-                <p className="text-muted-foreground text-sm pt-5 leading-6">
+                <h3 className="text-lg md:text-xl font-semibold font-['Montserrat']">
+                  {mission.title}
+                </h3>
+                <p className="text-base md:text-lg font-light pt-3 font-['Figtree'] leading-6">
                   {mission.description}
                 </p>
               </div>

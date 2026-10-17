@@ -4,7 +4,7 @@ import Logo from "../../../assets/logo.png";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95">
+    <header className="sticky top-0 z-50 w-full border-b border-white/20 bg-white/40 backdrop-blur-xl backdrop-saturate-150 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] py-3">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -17,15 +17,15 @@ export default function Navbar() {
             <img
               src={Logo}
               alt="Logo"
-              width={70}
-              height={70}
+              width={100}
+              height={80}
               className="rounded"
             />
           </a>
         </div>
 
         {/* Mobile Logo */}
-        <div className="flex  md:hidden px-4">
+        <div className="flex  md:hidden px-6">
           <a href="/" className="flex items-center space-x-2">
             <img
               src={Logo}
@@ -43,24 +43,36 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="hidden md:flex items-center gap-6"
         >
-          <a href="#about" className="text-sm font-medium hover:text-primary">
+          <a
+            href="#about"
+            className="text-sm md:text-base font-medium font-['Montserrat'] hover:text-primary"
+          >
             About Us
           </a>
-          {/* <a href="#vision" className="text-sm font-medium hover:text-primary">
-            Vision
-          </a> */}
-          <a href="#mission" className="text-sm font-medium hover:text-primary">
+          <a
+            href="#mission"
+            className="text-sm md:text-base font-medium font-['Montserrat'] hover:text-primary"
+          >
             Mission
+          </a>
+          <a
+            href="#weekly-meditation"
+            className="text-sm font-medium md:text-base font-['Montserrat'] hover:text-primary"
+          >
+            Weekly Prayer
           </a>
           <a
             href="#joinus"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium hover:text-primary"
+            className="text-sm font-medium md:text-base font-['Montserrat'] hover:text-primary"
           >
             Join Our Group
           </a>
-          <a href="#prayer" className="text-sm font-medium hover:text-primary">
+          <a
+            href="#prayer"
+            className="text-sm font-medium md:text-base font-['Montserrat'] hover:text-primary"
+          >
             Prayer Request
           </a>
         </motion.nav>

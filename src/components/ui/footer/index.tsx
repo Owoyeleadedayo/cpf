@@ -3,12 +3,12 @@ import { useInView } from "react-intersection-observer";
 import Logo from "../../../assets/logo.png";
 
 const Footer = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
 
 
   return (
     <motion.footer
-      className="w-full border-t py-6 md:py-16 bg-muted"
+      className="w-full border-t px-4 py-6 md:py-16 bg-[#F1F1F1]"
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
       ref={ref}
@@ -36,12 +36,12 @@ const Footer = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="md:flex hidden">
+            <div className="flex">
               <a href="/" className="space-x-2">
                 <img
                   src={Logo}
                   alt="Logo"
-                  width={70}
+                  width={100}
                   height={70}
                   className="rounded"
                 />
@@ -50,7 +50,7 @@ const Footer = () => {
             {/* <a href="/" className="flex items-center space-x-2">
               <span className="font-bold">COVENANT PEOPLE FELLOWSHIP</span>
             </a> */}
-            <p className="text-sm text-muted-foreground">
+            <p className="text-base font-['Figtree'] text-muted-foreground">
               Established 2007, Revised 2024
             </p>
           </motion.div>
@@ -62,29 +62,31 @@ const Footer = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-['Montserrat'] font-semibold mb-4">
+              Quick Links
+            </h3>
             <nav className="flex flex-col gap-2">
               <a
                 href="#about"
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className="text-base font-['Figtree'] text-muted-foreground hover:text-foreground"
               >
                 About Us
               </a>
               <a
                 href="#vision"
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className="text-base font-['Figtree'] text-muted-foreground hover:text-foreground"
               >
-                Vision
+                Weekly Prayer
               </a>
               <a
                 href="#mission"
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className="text-base font-['Figtree'] text-muted-foreground hover:text-foreground"
               >
                 Mission
               </a>
               <a
                 href="#prayer"
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className="text-base font-['Figtree'] text-muted-foreground hover:text-foreground"
               >
                 Prayer Request
               </a>
@@ -92,7 +94,7 @@ const Footer = () => {
                 href="https://chat.whatsapp.com/example"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className="text-base font-['Figtree'] text-muted-foreground hover:text-foreground"
               >
                 Join Our Group
               </a>
@@ -106,8 +108,10 @@ const Footer = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <h3 className="text-lg font-semibold mb-4">Core Values</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h3 className="text-lg font-['Montserrat'] font-semibold mb-4">
+              Core Values
+            </h3>
+            <ul className="space-y-2 text-base font-['Figtree'] text-muted-foreground">
               <li>Truth</li>
               <li>Love</li>
               <li>Completeness</li>
@@ -122,14 +126,16 @@ const Footer = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <address className="not-italic text-sm text-muted-foreground">
-              <p>Email: www.csfellowships@gmail.com</p>
+            <h3 className="text-lg font-['Montserrat'] font-semibold mb-4">
+              Contact Us
+            </h3>
+            <address className="not-italic text-base font-['Figtree'] text-muted-foreground">
+              <p>www.csfellowships@gmail.com</p>
               <p>whatsapp: +(234)8037219016</p>
               <p>whatsapp: +(234)8026016413</p>
-             
+
               <p className="mt-4">
-                &copy; {new Date().getFullYear()} Covenant People Fellowship.
+                &copy;{new Date().getFullYear()} Covenant People Fellowship.
                 <br />
                 All rights reserved.
               </p>

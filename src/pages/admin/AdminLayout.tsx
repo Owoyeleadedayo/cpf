@@ -42,6 +42,8 @@ export default function AdminLayout() {
             <AdminNavLink to="/admin">Overview</AdminNavLink>
             <AdminNavLink to="/admin/posts">Posts</AdminNavLink>
             <AdminNavLink to="/admin/posts/new">Create Post</AdminNavLink>
+            <AdminNavLink to="/admin/meditations">Meditations</AdminNavLink>
+            <AdminNavLink to="/admin/meditations/new">New Meditation</AdminNavLink>
             <NavLink
               to="/"
               className="rounded-full px-3 py-2 text-sm font-semibold uppercase tracking-wide text-muted-foreground transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -64,8 +66,7 @@ function AdminNavLink({ to, children }: { to: string; children: ReactNode }) {
     <NavLink
       to={to}
       className={({ isActive }: { isActive: boolean }) =>
-        `rounded-full px-3 py-2 text-sm font-semibold uppercase tracking-wide transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
-          isActive ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-primary"
+        `rounded-full px-3 py-2 text-sm font-semibold uppercase tracking-wide transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${isActive ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-primary"
         }`
       }
       end
