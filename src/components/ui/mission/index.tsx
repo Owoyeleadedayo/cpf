@@ -46,6 +46,11 @@ export default function MissionSession() {
         >
           {[
             {
+              title: "Vision",
+              description:
+                "To raise a tribe of complete people who birth destinies and bring to pass the will of God on earth",
+            },
+            {
               title: "Gathering Together",
               description:
                 "In line with Psalm 50:5, we gather together from time to time for fellowship both online and in-person.",
@@ -74,11 +79,6 @@ export default function MissionSession() {
               title: "Birthing Destinies",
               description:
                 "Our major assignment is to birth destinies at God's Threshing Floor through intercession as the Spirit of God instructs.",
-            },
-            {
-              title: "Vision",
-              description:
-                "To raise a tribe of complete people who birth destinies and bring to pass the will of God on earth",
             },
           ].map((mission, index) => (
             <motion.div
