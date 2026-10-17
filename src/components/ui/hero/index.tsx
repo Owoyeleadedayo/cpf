@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 
 const slides = [
   {
-    image: Hero,
+    image: Hero2,
     title: "Birthing Destinies.",
     subtitle:
       "We are a community of believers on a journey to fulfilling the God purpose",
@@ -16,7 +16,7 @@ const slides = [
       "Gathering together for the purpose of Word, Worship and Warfare",
   },
   {
-    image: Hero2,
+    image: Hero,
     title: "Empowered by His covenant.",
     subtitle:
       "We are a people of prayer. We access the supernatural to fulfill God's mandate",
