@@ -42,7 +42,7 @@ export function HeroSlider() {
         autoplay
         autoplaySpeed={5000}
         effect="fade"
-        speed={1200}
+        speed={1000}
         dots={false}
         draggable
         beforeChange={(_, to) => setCurrent(to)}

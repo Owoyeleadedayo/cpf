@@ -80,7 +80,7 @@ export default function CTAPrayerSession() {
         <div className="container relative z-10 py-4 px-4 md:px-8">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-3">
-              <h2 className="text-3xl font-semibold font-['Montserrat'] tracking-tight md:text-5xl drop-shadow-lg">
+              <h2 className="text-3xl text-white font-semibold font-['Montserrat'] tracking-tight md:text-5xl drop-shadow-lg">
                 Get Involved Today
               </h2>
               <p className="max-w-[600px] font-['Figtree'] text-base md:text-lg xl:text-xl text-white/85">
