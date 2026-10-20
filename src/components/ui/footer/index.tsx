@@ -73,16 +73,22 @@ const Footer = () => {
                 About Us
               </a>
               <a
-                href="#vision"
+                href="#mission"
                 className="text-base font-['Figtree'] text-muted-foreground hover:text-foreground"
               >
-                Weekly Prayer
+                Mission and Vision
               </a>
               <a
                 href="#mission"
                 className="text-base font-['Figtree'] text-muted-foreground hover:text-foreground"
               >
-                Mission
+                What We Do
+              </a>
+              <a
+                href="#weekly-meditation"
+                className="text-base font-['Figtree'] text-muted-foreground hover:text-foreground"
+              >
+                Weekly Prayer
               </a>
               <a
                 href="#prayer"

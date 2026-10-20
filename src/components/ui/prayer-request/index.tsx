@@ -66,6 +66,32 @@ export default function CTAPrayerSession() {
 
   return (
     <>
+      {/* Prayer Request Section */}
+      <section
+        id="prayer"
+        className="w-full py-10 md:py-12 lg:py-20 flex flex-col items-center justify-center bg-[#F1F1F1]"
+      >
+        <div className="container px-4 md:px-8">
+          <div className="flex flex-col items-center justify-center space-y-2 text-center">
+            <div className="space-y-2">
+              <h2 className="text-2xl md:text-3xl font-semibold font-['Montserrat'] tracking-tight text-primary">
+                Send Your Prayer Request
+              </h2>
+              <p className="max-w-[600px] text-muted-foreground font-['Montserrat'] md:text-xl/relaxed lg:text-base/relaxed xl:text-lg/relaxed pt-2">
+                " Call unto me and I will answer you and show you great and
+                mighty things which you do not know " <br />
+                <span className="italic text-primary/80 font-['Figtree']">
+                  - Jeremiah 33:3
+                </span>
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto max-w-lg py-12">
+            <PrayerRequestForm />
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
       <motion.section
         id="joinus"
@@ -102,30 +128,6 @@ export default function CTAPrayerSession() {
           </div>
         </div>
       </motion.section>
-
-      {/* Prayer Request Section */}
-      <section
-        id="prayer"
-        className="w-full py-10 md:py-12 lg:py-20 flex flex-col items-center justify-center bg-white"
-      >
-        <div className="container px-4 md:px-8">
-          <div className="flex flex-col items-center justify-center space-y-2 text-center">
-            <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-semibold font-['Montserrat'] tracking-tight text-primary">
-                Send Your Prayer Request
-              </h2>
-              <p className="max-w-[600px] text-muted-foreground font-['Montserrat'] md:text-xl/relaxed lg:text-base/relaxed xl:text-lg/relaxed pt-2">
-                " Call unto me and I will answer you and show you great and
-                mighty things which you do not know " <br />
-                <span className="italic text-primary/80 font-['Figtree']">- Jeremiah 33:3</span>
-              </p>
-            </div>
-          </div>
-          <div className="mx-auto max-w-lg py-12">
-            <PrayerRequestForm />
-          </div>
-        </div>
-      </section>
 
       {/* Modal for Join Fellowship Form */}
       {isModalOpen && (
