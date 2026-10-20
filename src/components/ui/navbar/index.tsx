@@ -62,18 +62,18 @@ export default function Navbar() {
             Weekly Prayer
           </a>
           <a
+            href="#prayer"
+            className="text-sm font-medium md:text-base font-['Montserrat'] hover:text-primary"
+          >
+            Prayer Request
+          </a>
+          <a
             href="#joinus"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium md:text-base font-['Montserrat'] hover:text-primary"
           >
             Join Our Group
-          </a>
-          <a
-            href="#prayer"
-            className="text-sm font-medium md:text-base font-['Montserrat'] hover:text-primary"
-          >
-            Prayer Request
           </a>
         </motion.nav>
 
