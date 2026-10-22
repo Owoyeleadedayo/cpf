@@ -81,10 +81,6 @@ export default function PrayerMeditation() {
           <h2 className="text-3xl font-bold font-['Montserrat'] tracking-tighter md:text-4xl">
             Prayer &amp; Meditation
           </h2>
-          <p className="max-w-xl font-['Figtree'] text-muted-foreground md:text-lg/relaxed">
-            Start your day in God's presence. A message from church leadership
-            to the congregation.
-          </p>
         </div>
         <motion.div
           variants={cardVariants}

@@ -19,9 +19,8 @@ const slides = [
     image: Hero,
     title: "Empowered by His covenant.",
     subtitle:
-      "We are a people of prayer. We access the supernatural to fulfill God's mandate",
-    description:
-      "Those who have made a covenant with me by sacrifice - Psalm 50:5",
+      "Gather together to me my saints [those who have found grace in my sight], those who have made a covenant with Me by sacrifice",
+   
   },
   {
     image: Hero3,
