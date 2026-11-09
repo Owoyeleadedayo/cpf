@@ -22,7 +22,7 @@ const slides = [
       "Gather together to me my saints [those who have found grace in my sight], those who have made a covenant with Me by sacrifice",
    
   },
-  {
+  {  
     image: Hero3,
     title: "Raising a Tribe of Intercessors.",
     subtitle:

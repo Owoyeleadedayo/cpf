@@ -11,11 +11,11 @@ const FALLBACK: WeeklyMeditation = {
   id: "fallback",
   title: "Daily Prayer & Meditation",
   greeting: "Good morning Covenant People of God 😊.",
-  scripture_reference: "Psalm 115:9–15",
+  scripture_reference: "Psalm 67:5-7",
   scripture_text:
-    "O Israel, trust and take refuge in the Lord! [Lean on, rely on, and be confident in Him!] He is their Help and their Shield. O house of Aaron [the priesthood], trust in and lean on the Lord! He is their Help and their Shield. You who [reverently] fear the Lord, trust in and lean on the Lord! He is their Help and their Shield. The Lord has been mindful of us, He will bless us: He will bless the house of Israel, He will bless the house of Aaron [the priesthood], He will bless those who reverently and worshipfully fear the Lord, both small and great. May the Lord give you increase more and more, you and your children. May you be blessed of the Lord, Who made heaven and earth!",
+    "Let the people praise thee, O God; let all the people praise thee. Then shall the earth yield her increase; and God, even our own God, shall bless us, God shall bless us; and all the ends of the earth shall fear Him",
   declaration:
-    "This week, trust and take refuge in the Lord God, the maker of heaven and earth, and there shall be showers of blessings upon you and your household in Jesus' name. Amen!",
+    "Through the month of November we shall be raising an altar of thanksgiving and praises to the most High God. Ever faithful father, Covenant Keeping God. for He alone is worthy of our worship, praises and thanksgiving for all He has done for us this year.",
   week_date: "",
   status: "published",
   is_active: true,
@@ -41,7 +41,10 @@ export default function PrayerMeditation() {
         .maybeSingle();
 
       if (error) {
-        console.warn("PrayerMeditation: Supabase error, using fallback.", error.message);
+        console.warn(
+          "PrayerMeditation: Supabase error, using fallback.",
+          error.message,
+        );
         return;
       }
       if (data) setMeditation(data as WeeklyMeditation);
@@ -57,12 +60,20 @@ export default function PrayerMeditation() {
   // Shared Framer Motion variants (mirrors Mission component style)
   const sectionVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut", delay: 0.2 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut", delay: 0.2 },
+    },
   };
 
   return (
